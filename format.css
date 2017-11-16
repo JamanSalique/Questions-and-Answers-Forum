@@ -3,5 +3,40 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-
+    background-color: #f0f5f5;
 }
+
+#title {
+    position: relative;
+    left: 45px;
+    font-family: sans-serif;
+}
+
+#login {
+    position: relative;
+    font-family: sans-serif;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #a4c1c1;
+    box-shadow: 2px 2px #777777;
+    height: 60px;
+}
+
+label {
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 80px;
+    text-align: right;
+}
+
+input {
+    display: inline-block;
+    float: left;  
+    transform: translate(0%,-10%);
+}
+
+#loginButton {
+    transform: translate(34%,10%);
+}
+
