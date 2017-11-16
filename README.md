@@ -10,7 +10,7 @@ DB of questions(Kai)<br>
 C9(David)<br>
 Heroku(David)<br>
 <br>
-DONE:
+DONE:<br>
 Login page<br>
 
 LANGUAGES:<br>
@@ -19,6 +19,7 @@ HTML<br>
 CSS<br>
 <br>
 OPTIONAL TODO:<br>
+Register user page<br>
 Question drafts<br>
 Upvotes / downvotes<br>
 Accepted answers<br>
