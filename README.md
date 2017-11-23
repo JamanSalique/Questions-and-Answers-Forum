@@ -2,17 +2,19 @@
 KCL forum<br>
 <br>
 TODO:<br>
-Question index page(Jordan)<br>
-Individual question page (Chris)<br>
-Post question page(Jaman)<br>
-DB of users(Kai)<br>
-DB of questions(Kai)<br>
-C9(David)<br>
 Heroku(David)<br>
+CSS(Jordan [& others])<br>
+Design pdf(Kai)<br>
+Test units(Chris [& others])<br>
 <br>
 DONE:<br>
+Question index page<br>
+Individual question page<br>
+Post question page<br>
+C9<br>
 Login page<br>
-
+Database<br>
+<br>
 LANGUAGES:<br>
 Ruby-on-rails<br>
 HTML<br>
