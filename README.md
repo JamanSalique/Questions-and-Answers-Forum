@@ -2,10 +2,10 @@
 KCL forum<br>
 <br>
 TODO:<br>
-Heroku(David)<br>
-CSS(Jordan [& others])<br>
-Design pdf(Kai)<br>
-Test units(Chris [& others])<br>
+Heroku<br>
+CSS<br>
+Design pdf<br>
+Test units<br>
 <br>
 DONE:<br>
 Question index page<br>
