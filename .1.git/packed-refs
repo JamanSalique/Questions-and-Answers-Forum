@@ -1,0 +1,8 @@
+# pack-refs with: peeled fully-peeled 
+92d4eb95470e70dc169b262ee8a7b681463c43f5 refs/remotes/origin/Chris
+f145c481d8d18b1cd8ceb5a0155076cb93e63a17 refs/remotes/origin/David
+92d4eb95470e70dc169b262ee8a7b681463c43f5 refs/remotes/origin/Jaman
+f82aa2fa0c5c4224640185290fb144e766eb7a5f refs/remotes/origin/Jordan
+47946c44c22d5aa687bc3ba430a07b5d8c825b21 refs/remotes/origin/Kai
+92d4eb95470e70dc169b262ee8a7b681463c43f5 refs/remotes/origin/dev
+d1f723eb80685517b373a3a99a19258c9e22bd5d refs/remotes/origin/master
