@@ -19,6 +19,9 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1/edit
   def edit
+    if current_user.id != @article.user_id
+      redirect_to @article, notice: 'You cannot edit unless logged in. '
+    end
   end
 
   # POST /articles

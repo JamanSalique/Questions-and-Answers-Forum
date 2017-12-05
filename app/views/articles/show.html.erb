@@ -14,7 +14,8 @@
 <% @article.comments.each do |comment| %>
 <p>
   <strong>Commenter:</strong>
-  <%= comment.commenter %>
+  <%= comment.user.email %>
+  Published <%= time_ago_in_words(comment.created_at) %> ago
 </p>
 
 <p>
@@ -25,10 +26,7 @@
 
 <p>Add a Comment:</p>
 <%= form_for([@article, @article.comments.build]) do |f| %>
-<p>
-  <% f.label :commenter %><br />
-  <%= f.text_field :commenter %>
-</p>
+
 
 <p>
   <% f.label :body %><br />
