@@ -1,27 +1,15 @@
-# SEGwenge
-KCL forum<br>
-<br>
-TODO:<br>
-Heroku<br>
-CSS<br>
-Design pdf<br>
-Test units<br>
-<br>
-DONE:<br>
-Question index page<br>
-Individual question page<br>
-Post question page<br>
-C9<br>
-Login page<br>
-Database<br>
-<br>
-LANGUAGES:<br>
-Ruby-on-rails<br>
-HTML<br>
-CSS<br>
-<br>
-OPTIONAL TODO:<br>
-Register user page<br>
-Question drafts<br>
-Upvotes / downvotes<br>
-Accepted answers<br>
+# SEG Lab Project
+###Team Name:
+- WENGE
+
+###Team Members:
+- Jaman Salique
+- Jordan Watson
+- Kai Rycroft
+- Chris (write full name)
+- Frankie (write full name)
+
+###APIs/GEMs used:
+- We used Devise: Devise is a gem used for user authentication. This gem was very useful as it allowed us to cut down a lot of time as we did not have to spend time on implementing our own user system.
+
+###Heroku link:
