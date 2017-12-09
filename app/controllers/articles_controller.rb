@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     if current_user.id != @article.user_id
-      redirect_to @article, notice: 'You cannot edit unless logged in. '
+      redirect_to @article, notice: 'You are not allowed to edit this post.'
     end
   end
 
@@ -57,10 +57,14 @@ class ArticlesController < ApplicationController
   # DELETE /articles/1
   # DELETE /articles/1.json
   def destroy
-    @article.destroy
-    respond_to do |format|
-      format.html { redirect_to articles_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
+    if current_user.id != @article.user_id
+      redirect_to @article, notice: 'You are not allowed to destroy this post.'
+    else
+      @article.destroy
+        respond_to do |format|
+        format.html { redirect_to articles_url, notice: 'Post was successfully destroyed.' }
+        format.json { head :no_content }
+      end
     end
   end
 

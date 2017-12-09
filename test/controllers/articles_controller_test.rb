@@ -1,49 +1,20 @@
 require 'test_helper'
 
 class ArticlesControllerTest < ActionController::TestCase
-  setup do
-    @article = articles(:one)
+  include Devise::Test::ControllerHelpers
+  
+ # we only have one test case for the controller as we
+ # have made many more test cases elsewhere more
+ # specifically in the articles actions test which are integration tests.
+ #see that integration tests for more test cases.
+  
+  test "creating a new post when you are signed out" do
+    user = users(:user_one)
+    sign_out user
+    get :create, params: {article: {title: "Test1", post: "body1",user_id: user.id}}
+    assert_response :redirect
+    assert_redirected_to new_user_session_path
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:articles)
-  end
 
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
-
-  test "should create article" do
-    assert_difference('Article.count') do
-      post :create, article: { post: @article.post, title: @article.title }
-    end
-
-    assert_redirected_to article_path(assigns(:article))
-  end
-
-  test "should show article" do
-    get :show, id: @article
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get :edit, id: @article
-    assert_response :success
-  end
-
-  test "should update article" do
-    patch :update, id: @article, article: { post: @article.post, title: @article.title }
-    assert_redirected_to article_path(assigns(:article))
-  end
-
-  test "should destroy article" do
-    assert_difference('Article.count', -1) do
-      delete :destroy, id: @article
-    end
-
-    assert_redirected_to articles_path
-  end
 end

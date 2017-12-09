@@ -22,7 +22,7 @@
     <% @articles.each do |article| %>
       <tr id="post">   
         <td><%= article.title %></td>
-        <td><%= article.post %></td>
+        <td><%= article.post[0..30] %><%# %><%= "..." %></td>
         <td><%= article.user.email %></td>
         <td> <%= (article.created_at.to_formatted_s(:long_ordinal)) %> </td>
         <td><%= link_to 'Show', article %></td>

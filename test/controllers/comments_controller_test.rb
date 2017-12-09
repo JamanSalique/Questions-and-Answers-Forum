@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class CommentsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+    #comments controller tested by integration tests. See comments_actions_test.
+
 end
