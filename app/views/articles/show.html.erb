@@ -6,13 +6,11 @@
 </h2>
 
 <div id="postTitle">
-  <p><strong>Author:</strong>
-  <%= @article.user.email %>
+  <p><strong><%= @article.user.email %></strong>
   </p>
 
 
 <p id="commentBody">
-  <strong>Post:</strong>
   <%= @article.post %>
 </p>
 </div>
@@ -22,13 +20,12 @@
 <% @article.comments.each do |comment| %>
 <div id="response">
 <p>
-  <strong>Commenter:</strong>
-  <%= comment.user.email %>
-  Published <%= time_ago_in_words(comment.created_at) %> ago
+  
+  <strong><%= comment.user.email %></strong>
+  |  <%= time_ago_in_words(comment.created_at) %> ago
 </p>
 
 <p id="commentBody">
-  <strong>Comment:</strong>
   
   <%= comment.body %>
   
