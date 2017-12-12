@@ -76,4 +76,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  #Change link to heroku link when we connected it
+  
+  config.action_mailer.default_url_options = {:host => 'https://seg-lab2-jamansalique.c9users.io/'}
 end
