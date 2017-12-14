@@ -23,7 +23,8 @@
 
     <% @articles.each do |article| %>
       <div id="articleNew">
-        
+ 
+       
         <span id="articleTitle"><%= link_to article.title, article %></span>
         
         <% if article.user.email.length < 60 %>

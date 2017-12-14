@@ -129,6 +129,7 @@ table {
 
 #articleNew:hover {
     background-color: #edecea;
+    transform: scale(1.01,1.01);
 }
 
 #articleTitle {
