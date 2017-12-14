@@ -79,5 +79,5 @@ Rails.application.configure do
   
   #Change link to heroku link when we connected it
   
-  config.action_mailer.default_url_options = {:host => 'https://seg-lab2-jamansalique.c9users.io/'}
+  config.action_mailer.default_url_options = {:host => 'https://damp-anchorage-76608.herokuapp.com/'}
 end
