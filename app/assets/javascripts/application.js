@@ -15,8 +15,8 @@
 //= require turbolinks
 //= require_tree .
 
-$.ajax(url: "/index").done(html) -> 
-    $(table).fadeIn(1500);
+// $.ajax(url: "/index").done(html) -> 
+//     $(table).fadeIn(1500);
 // $(document).ready(function() {
 //     $('table').fadeIn(1500);
 // });

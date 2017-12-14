@@ -4,39 +4,65 @@
 <p id="notice"><%= notice %></p>
 
 <div id="title">
-  <h1>Listing Posts</h1>
+  <h1>Wenge Forum</h1>
 </div>
 
-<table>
-  <thead>
-    <tr id="tableHeaders">
-      <th>Title</th>
-      <th>Post</th>
-      <th>User</th>
-      <th>Time Posted</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div id="postsAndNew">
+<h2>Posts:</h2>
 
-  <tbody>
+<div id="newPostTop">
+<%= link_to 'New Post', new_article_path %>
+</div>
+</div>
+
+</br>
+
+<!-- CODE FROM HERE //message to myself, i.e Jordan -->
+
+
+
     <% @articles.each do |article| %>
-      <tr id="post">   
-        <td><%= article.title %></td>
-        <td><%= article.post[0..30] %><%# %><%= "..." %></td>
-        <td><%= article.user.email %></td>
-        <td> <%= (article.created_at.to_formatted_s(:long_ordinal)) %> </td>
-        <td><%= link_to 'Show', article %></td>
-        <% if article.user == current_user %>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <div id="articleNew">
+        
+        <span id="articleTitle"><%= link_to article.title, article %></span>
+        
+        <% if article.user.email.length < 60 %>
+         <span id="articleAuthor"><%= "by " %><%# %><%= article.user.email %></span>
+        <% else %>
+         <span id="articleAuthor"><%= "by " %><%# %><%= article.user.email[0..60] %><%# %><%= "..." %></span>
         <% end %>
-      </tr>
+        </br>
+        </br>
+        
+        <span id="articlePost">
+        <% if article.post.length < 100 %>
+        <%= article.post %>
+        <% else %>
+        <%= article.post[0..100] %><%# %><%= "..." %>
+        <% end %>
+        </span>
+        
+       
+        
+        
+        
+        <span id="articleCreated">
+        <%= (article.created_at.to_formatted_s(:long_ordinal)) %>
+
+        <% if article.user == current_user %>
+        <%= link_to 'Edit', edit_article_path(article) %>
+        <%= link_to 'Delete', article, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+        </span>
+        </br>
+        </div>
     <% end %>
-  </tbody>
-</table>
+  
+  
+  
 
 <br>
 
-<div id="newPost">
+<div id="newPostBottom">
 <%= link_to 'New Post', new_article_path %>
 </div>
